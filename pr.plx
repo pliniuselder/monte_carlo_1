@@ -3,10 +3,10 @@ use warnings;
 use strict;
 
 if (@ARGV < 1) {
-    print "no arguments (input format 'y a b'). exit\n";
+    print "no arguments (input format 'height temp y'). exit\n";
     exit;
 } elsif (@ARGV > 3) {
-    print "programm accept no more then three arguments (input format 'y a b'). exit\n";
+    print "programm accept no more then three arguments (input format 'height temp y'). exit\n";
     exit;
 }
 
