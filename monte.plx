@@ -31,5 +31,3 @@ while (abs($y - $_y) > $error) {
     }
 }
 print "$i: _y = $_y\tx = $x\n";
-print "y = " . ($a * $x + $b * $x**3) ."\n"
-
