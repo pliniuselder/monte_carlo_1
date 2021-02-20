@@ -37,5 +37,5 @@ while (abs($y - $_y) > $error) {
 	$x = $x + rand($x - $x*($_y/$y));
     }
 }
-print "height = $h\ttmp = $t\ty = $y\n";
+print "height = $ARGV[0]\ttmp = $ARGV[1]\ty = $ARGV[2]\n";
 print "\tp = $p\n\tro = $ro\n\ta = $a\n\tb = $b\n\tx = $x\n";
