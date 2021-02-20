@@ -16,9 +16,12 @@ my $ro;
 my $a;
 my $b;
 
+my $out_h = $h;
 $h /= 10000;
 $p = 1013 - 366.0833*$h + 54.29166*$h**2 - 4.417*$h**3 + 0.20833*$h**4;
+my $out_p = $p;
 $p /= 1.3332;
+my $out_t = $t;
 $t += 273.15;
 $ro = ($p/$t) * 0.0473;
 $ro /= 0.12475;
@@ -38,4 +41,4 @@ while (abs($y - $_y) > $error) {
     }
 }
 print "height = $ARGV[0]\ttmp = $ARGV[1]\ty = $ARGV[2]\n";
-print "\tp = $p\n\tro = $ro\n\ta = $a\n\tb = $b\n\tx = $x\n";
+print "\tp = $out_p\n\tEAS = " . $a*$y . "\n\tTAT = " . ((($x/87)**2)+$out_t) . "\n\ta = $a\n\tb = $b\n\tx = $x\n";
