@@ -13,13 +13,13 @@ if (@ARGV < 1) {
 my ($y, $a, $b) = @ARGV;
 print "y = $y, a = $a, b = $b\ny = a*x + b*x^3\nx = ?\n";
 my $i = 0;
-my $factor = 0.00000000001;
+my $error = 0.00000000001;
 my $_y = 0;
 my $x = rand($y);
-while (abs($y - $_y) > $factor) {
+while (abs($y - $_y) > $error) {
     $i++;
     $_y = $a * $x + $b * $x**3;
-    last if abs($y - $_y) < $factor;
+    last if abs($y - $_y) < $error;
     if ($_y > $y) {
 	#$x = $x - rand($x);
 	#$x = $x - rand($x*($y/$_y));
